@@ -14,7 +14,7 @@ public class AutoComplete_Editbox
 		
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
 		driver.get("http://cleartrip.com");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
@@ -43,13 +43,13 @@ public class AutoComplete_Editbox
 		
 	
 		//Select date
-		driver.findElement(By.linkText("23")).click();
+		driver.findElement(By.linkText("22")).click();
 		
 		
 		//Click Next month button at return date calendar
 		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/a")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.linkText("23")).click();
+		driver.findElement(By.linkText("12")).click();
 		
 		
 		//click Search button
